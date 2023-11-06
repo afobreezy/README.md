@@ -1,0 +1,60 @@
+// ALGORITHM add_three_num
+// VAR
+//     num1: INTEGER
+//     num2: INTEGER
+//     num3: INTEGER
+//     total: INTEGER :=0
+// BEGIN
+//    total = num1 + num2 + num3
+//    Write(total)
+// END
+
+// ALGORITHM addThreeNum 
+// VAR
+//     num1, num2, num3 : INTEGER
+//     total : INTEGER :=0
+// BEGIN
+//      IF (num1 != INTEGER) THEN 
+//         Write("only numbers are allowed")
+//     ELSE 
+//         total := num1 + num2 + num3
+//         Write(total)
+//     END_IF
+// END
+
+// ALGORITHM addAnyLengthOfNumbers
+// VAR
+//      nums = ARRAY_OF INTEGER[N];
+//      total = INTEGER := 0
+// BEGIN    
+//      FOR i FROM 0 TO N STEP 1 DO
+//            total := total += nums[i];
+//     END_FOR
+// Write(total)
+// END 
+
+
+ALGORITHM sentence
+VAR
+     sentCount : INTEGER := 0
+     wordCount : INTEGER := 0
+     vowelCount : INTEGER := 0
+     sentence: STRING[N]
+     vowels : STRING := "aeiou"
+BEGIN
+    FOR i FROM 0 TO N STEP 1 DO
+        IF (vowels.include(sentence[i])) THEN
+            vowelCount +=1
+        END_IF
+        IF (sentence[i] == " ") THEN
+            wordCount += 1
+            sentCount = sentCount
+        ELSE
+            sentCount += 1
+        END_IF
+    END_FOR
+    Write(vowelCount)
+    Write(wordCount)
+    Write(sentCount)
+END
+         
